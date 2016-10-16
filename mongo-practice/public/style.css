@@ -1,0 +1,190 @@
+body {
+    background-position: center center;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: 100%;
+  	-webkit-background-size:cover;
+	  -moz-background-size:cover;
+	  -o-background-size:cover;
+    background-image: url("6e609595.jpg");
+    color:#FFF;
+
+
+}
+
+
+.fixed-bottom {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.submitPrice {
+  height: 100px;
+  border-radius: 15px;
+  font-size:20px;
+  margin-bottom:100px;
+}
+.search {
+  height:50px;
+  border-radius:10px;
+  border: 1px gray solid;
+  font-size:20px;
+  transition: ease 1s;
+  color:black;
+}
+
+
+
+input:hover::-webkit-input-placeholder {
+  transition:all .5s ease;
+  padding-top: 50px;
+}
+
+input:focus::-webkit-input-placeholder {
+  transition:all .5s ease;
+  padding-top: 50px;
+}
+
+input:hover::-moz-input-placeholder {
+  transition:all .5s ease;
+  padding-top: 50px;
+}
+
+input:focus::-moz-input-placeholder {
+  transition:all .5s ease;
+  padding-top: 50px;
+}
+
+.searchBtn {
+  height:50px;
+}
+
+.sidePanel {
+  height:100%;
+}
+
+
+.navbar  {
+  background-color:#00cc66;
+  box-shadow:0px 0px 15px 0px rgba(0,0,0,1);
+}
+
+.col-xs-10 {
+  margin-top:10px;
+}
+
+.col-xs-8 {
+  margin-top:10px;
+}
+
+
+.header h1 {
+  margin-left:10px;
+  margin-top:15px;
+  text-shadow: 2px 1.5px rgba(0,0,0,.5)
+}
+
+h2 {
+  margin-top: 10%;
+  margin-bottom:35px;
+  text-shadow:3px 1px 4px rgba(0,0,0,1)
+}
+
+.btn {
+  background-color:#00cc66;
+  border:none;
+  color:white;
+}
+
+.btn:hover {
+  box-shadow:-5px 5px 10px 0px rgba(0,0,0,1);
+  color:white;
+}
+
+h3,h4 {
+  text-shadow:3px 1px 4px rgba(0,0,0,1)
+}
+
+.fixed-bottom {
+  color:white;
+  font-size:15px;
+}
+
+
+.aboutPanel {
+  background-color: blue;
+  height:500px;
+  margin-left:100%;
+  position:absolute;
+  transition: margin-left 1s ease;
+}
+
+.icon-bar {
+  color:white;
+  z-score:100;
+  background-color:white;
+}
+
+a {
+  color:white;
+}
+
+.facebook {
+  background-color:#3b5998;
+  margin-right:10px;
+  width:100px;
+}
+
+.twitter {
+  background-color:#00aced;
+  width:100px;
+}
+
+#emaildesc {
+  margin-top:10px;
+}
+
+#boozeemail {
+  font-weight:bold;
+}
+#user {
+  display:inline;
+  margin-left:40px;
+  margin-top:4px;
+  float:left;
+}
+
+#points {
+  display:inline;
+  float:right;
+  margin-right:40px;
+  margin-top:4px;
+}
+
+.rankers{
+  background-color:#d3d3d3;
+  color:black;
+}
+
+.signInput {
+  width:120px;
+  margin-right:10px;
+  display:inline;
+}
+
+.signInBtn {
+  display:inline;
+}
+
+.signup {
+  margin-top:50px;
+  height:50px;
+}
+
+input {
+  color:black;
+}
