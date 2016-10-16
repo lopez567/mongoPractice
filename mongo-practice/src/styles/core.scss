@@ -1,0 +1,637 @@
+:global {
+  @import 'base';
+  @import 'vendor/normalize';
+  $orange:#e18728;
+  $primary-color:#003333;
+  //$primary-color:#00cc66;
+  $white:#F6F6F6;
+  $black:#404040;
+  $newGreen:saturate($primary-color, 50%);
+  html {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Dosis, Lekton, Helvetica, sans-serif;
+    /* Chrome,Safari4+ */
+
+    color:#FFF;
+    background-position: center center;
+    background-image: url('liquorstore.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+  }
+
+  #root {
+    background: rgba(7,7,7,0.99);
+  background: -moz-linear-gradient(top, rgba(7,7,7,0.99) 0%, rgba(7,7,7,1) 8%, rgba(7,7,7,0.9) 18%, rgba(7,7,7,0.86) 22%, rgba(7,7,7,0.62) 47%, rgba(7,7,7,0.11) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(7,7,7,0.99)), color-stop(8%, rgba(7,7,7,1)), color-stop(18%, rgba(7,7,7,0.9)), color-stop(22%, rgba(7,7,7,0.86)), color-stop(47%, rgba(7,7,7,0.62)), color-stop(100%, rgba(7,7,7,0.11)));
+  background: -webkit-linear-gradient(top, rgba(7,7,7,0.99) 0%, rgba(7,7,7,1) 8%, rgba(7,7,7,0.9) 18%, rgba(7,7,7,0.86) 22%, rgba(7,7,7,0.62) 47%, rgba(7,7,7,0.11) 100%);
+  background: -o-linear-gradient(top, rgba(7,7,7,0.99) 0%, rgba(7,7,7,1) 8%, rgba(7,7,7,0.9) 18%, rgba(7,7,7,0.86) 22%, rgba(7,7,7,0.62) 47%, rgba(7,7,7,0.11) 100%);
+  background: -ms-linear-gradient(top, rgba(7,7,7,0.99) 0%, rgba(7,7,7,1) 8%, rgba(7,7,7,0.9) 18%, rgba(7,7,7,0.86) 22%, rgba(7,7,7,0.62) 47%, rgba(7,7,7,0.11) 100%);
+  background: linear-gradient(to bottom, rgba(7,7,7,0.99) 0%, rgba(7,7,7,1) 8%, rgba(7,7,7,0.9) 18%, rgba(7,7,7,0.86) 22%, rgba(7,7,7,0.62) 47%, rgba(7,7,7,0.11) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070707', endColorstr='#070707', GradientType=0 );
+  		/* IE6-9 */
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .btn {
+    background-color:$primary-color;
+    border:none;
+    color:white;
+    font-weight:500;
+    letter-spacing:1px;
+    font-size:16px;
+    transition: all .5s ease;
+    font-family: Lekton
+  }
+
+  a:hover {
+    color:$black;
+  }
+  .icon-bar {
+    background-color:white;
+  }
+  .wrapper {
+    height:100%;
+  }
+
+    .main {
+      min-height:calc(100% - 170px);
+      margin-bottom:100px;
+      padding-bottom:100px;
+    }
+
+    .foot {
+      position:relative;
+      height:100px;
+      margin-top:-100px;
+      width: 100%;
+      background: rgba(7,7,7,0.11);
+      background: -moz-linear-gradient(top, rgba(7,7,7,0.11) 0%, rgba(7,7,7,0.11) 3%, rgba(7,7,7,0.7) 47%, rgba(7,7,7,0.99) 91%, rgba(7,7,7,1) 92%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(7,7,7,0.11)), color-stop(3%, rgba(7,7,7,0.11)), color-stop(47%, rgba(7,7,7,0.7)), color-stop(91%, rgba(7,7,7,0.99)), color-stop(92%, rgba(7,7,7,1)));
+      background: -webkit-linear-gradient(top, rgba(7,7,7,0.11) 0%, rgba(7,7,7,0.11) 3%, rgba(7,7,7,0.7) 47%, rgba(7,7,7,0.99) 91%, rgba(7,7,7,1) 92%);
+      background: -o-linear-gradient(top, rgba(7,7,7,0.11) 0%, rgba(7,7,7,0.11) 3%, rgba(7,7,7,0.7) 47%, rgba(7,7,7,0.99) 91%, rgba(7,7,7,1) 92%);
+      background: -ms-linear-gradient(top, rgba(7,7,7,0.11) 0%, rgba(7,7,7,0.11) 3%, rgba(7,7,7,0.7) 47%, rgba(7,7,7,0.99) 91%, rgba(7,7,7,1) 92%);
+      background: linear-gradient(to bottom, rgba(7,7,7,0.11) 0%, rgba(7,7,7,0.11) 3%, rgba(7,7,7,0.7) 47%, rgba(7,7,7,0.99) 91%, rgba(7,7,7,1) 92%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070707', endColorstr='#070707', GradientType=0 );
+    }
+.footer-title{
+list-style: none;
+width:100px;
+text-align: center;
+margin-bottom: 10px;
+border-bottom:1px solid $white;
+color:$white;
+font-family:Lekton;
+}
+
+li {
+  list-style:none;
+}
+.col-xs-9 {
+  padding-right:0px;
+  padding-left:0px;
+}
+  .page-container {
+    background-image:url('liquorstore.jpg')
+  }
+  .submitPrice {
+    height: 100px;
+    border-radius: 15px;
+    font-size:18px;
+    letter-spacing:1px;
+  }
+  .search {
+    height:50px;
+    border-radius:10px;
+    border: 1px gray solid;
+    font-size:20px;
+    transition: ease 1s;
+    color:black;
+  }
+  p {
+    font-family: Lekton, Helvetica, sans-serif;
+  }
+
+  input:hover::-webkit-input-placeholder {
+    transition:all .5s ease;
+    padding-top: 50px;
+  }
+
+  input:focus::-webkit-input-placeholder {
+    transition:all .5s ease;
+    padding-top: 50px;
+  }
+
+  input:hover::-moz-input-placeholder {
+    transition:all .5s ease;
+    padding-top: 50px;
+  }
+
+  input:focus::-moz-input-placeholder {
+    transition:all .5s ease;
+    padding-top: 50px;
+  }
+
+  .searchBtn {
+    height:50px;
+    font-weight:bold;
+  }
+
+  .sidePanel {
+    height:100%;
+  }
+  .buttons {
+    margin-top: 20px;
+  }
+
+  .navbar  {
+
+    background-image: -ms-linear-gradient(bottom left, #003333 0%, #054D27 140%);
+    background-image: -moz-linear-gradient(bottom left, #003333 0%, #054D27 140%);
+    background-image: -o-linear-gradient(bottom left, #003333 0%, #054D27 140%);
+    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #003333), color-stop(140, #054D27));
+    background-image: -webkit-linear-gradient(bottom left, #003333 0%, #054D27 140%);
+/*
+  background-image: linear-gradient(to top right, #003333 0%, #054D27 140%);
+    background-image: -ms-linear-gradient(bottom left, #00CC66 0%, #002B17 140%);
+    background-image: -moz-linear-gradient(bottom left, #00CC66 0%, #002B17 140%);
+    background-image: -o-linear-gradient(bottom left, #00CC66 0%, #002B17 140%);
+    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #00CC66), color-stop(140, #002B17));
+    background-image: -webkit-linear-gradient(bottom left, #00CC66 0%, #002B17 140%);
+    background-image: linear-gradient(to top right, #00CC66 0%, #002B17 140%);
+*/
+    box-shadow:0px 0px 15px 0px rgba(0,0,0,1);
+  }
+  .SideView {
+    margin-bottom: 80px;
+  }
+
+  .SideView h2 {
+    border-bottom: 1px solid $white;
+  }
+
+  .SideView p {
+    font-weight:600;
+    line-height:1.8em;
+    letter-spacing: 1.7px;
+    text-align:justify;
+    padding-right:5px;
+  }
+  .col-xs-10 {
+    margin-top:10px;
+  }
+
+  .col-xs-8 {
+    margin-top:10px;
+  }
+  .pointer {
+    cursor: pointer;
+    cursor: hand;
+  }
+  .btn:focus {
+    color:$white;
+  }
+  h1 {
+    margin-top:20px;
+    font-size:36px;
+  }
+  h2 {
+    margin-top: 20px;
+    margin-bottom:35px;
+    text-shadow:3px 1px 4px rgba(0,0,0,1);
+    padding-bottom:10px;
+  }
+
+  .footer-ul {
+    display:inline-block;
+    padding-bottom:0px;
+    margin-bottom:3px;
+  }
+
+
+  .btn:hover {
+    box-shadow:-5px 5px 10px 0px rgba(0,0,0,1);
+    /* IE10+ */
+    /* IE10+ */
+    background-image: -ms-radial-gradient(center bottom, ellipse farthest-corner, #F6F6F6 40%, #9E9E9E 140%);
+
+    /* Mozilla Firefox */
+    background-image: -moz-radial-gradient(center bottom, ellipse farthest-corner, #F6F6F6 40%, #9E9E9E 140%);
+
+    /* Opera */
+    background-image: -o-radial-gradient(center bottom, ellipse farthest-corner, #F6F6F6 40%, #9E9E9E 140%);
+
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 359, color-stop(40, #F6F6F6), color-stop(140, #9E9E9E));
+
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-radial-gradient(center bottom, ellipse farthest-corner, #F6F6F6 40%, #9E9E9E 140%);
+
+    /* W3C Markup */
+    background-image: radial-gradient(ellipse farthest-corner at center bottom, #F6F6F6 40%, #9E9E9E 140%);
+    color:$black;
+    font-weight:bold;
+  }
+
+  h3,h4 {
+    text-shadow:3px 1px 4px rgba(0,0,0,1)
+  }
+
+  input {
+    color:$black;
+  }
+
+  .aboutPanel {
+    background-color: blue;
+    height:500px;
+    margin-left:100%;
+    position:absolute;
+    transition: margin-left 1s ease;
+  }
+
+  a {
+    color:white;
+    letter-spacing: 3px;
+    font-size:16px;
+    font-weight:500;
+  }
+
+  .facebook {
+    background-color:#3b5998;
+    margin-right:10px;
+    width:100px;
+    background-image:none;
+  }
+
+  .twitter {
+    background-color:#00aced;
+    width:100px;
+    background-image:none;
+  }
+  a:focus {
+    color:$black;
+  }
+  #emaildesc {
+    margin-top:10px;
+  }
+
+  #boozeemail {
+    font-weight:bold;
+  }
+  #user {
+    display:inline;
+    margin-left:40px;
+    font-size: 16px;
+    margin-top:4px;
+    margin-bottom:4px;
+    font-weight:bold;
+    float:left;
+  }
+
+  #points {
+    display:inline;
+    float:right;
+    margin-top:4px;
+    margin-bottom:4px;
+    font-size:16px;
+    margin-right:40px;
+  }
+
+  .rankers{
+    background: rgba(07,07,07,.5);
+    color:$white;
+    border: 1px solid $white;
+  }
+
+  .rankers:nth-child(odd) {
+    background: rgba(07,07,07,.1);
+}
+
+  .signInput {
+    width:120px;
+    margin-right:10px;
+    display:inline;
+  }
+
+  .signInBtn {
+    display:inline;
+  }
+
+  .signup {
+    margin-top:50px;
+    height:50px;
+  }
+
+  .input {
+    color:$white;;
+    background-color:$black;
+    height:35px;
+    width:300px;
+    border:none;
+  }
+    .result h1 {
+    float:left;
+    position:relative;
+  }
+
+  .result {
+    background-color:#111111;
+    box-shadow:10px 10px 23px 0px rgba(0,0,0,0.75);
+    color:$white;
+  }
+  .result .store {
+    width:100%;
+    text-align:center;
+    margin:0;
+  }
+  .result .submitted {
+    clear:right;
+    float:left;
+    display: inline;
+    margin-bottom:0px;
+  }
+
+  .result .miles {
+    float:right;
+    display: inline;
+    margin-bottom:0px;
+  }
+  .mainPrices {
+    background-color:#111111;
+    padding:0;
+    margin:0;
+    height:inherit;
+  }
+  .mainPrice {
+    background-color:$primary-color;
+    padding:0px 0px 0px 0px;
+    height:inherit;
+  }
+  .mainPrice .resultPrice {
+    text-align:center;
+    padding-top:10px;
+    margin-top:auto;
+    margin-left:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    padding-bottom:16px;
+    height:inherit;
+  }
+  .result a {
+    color: $white;
+  }
+  .result a:hover {
+    color:$primary-color;
+  }
+  .modal-content {
+    background-color:#222222;
+    border-bottom:none;
+  }
+
+  .modal-p {
+    color:#404040;
+  }
+  .modal-footer {
+    background-color:#111111;
+    border-top:none;
+  }
+  .signupButton {
+    float:right;
+    margin-top:-50px;
+    margin-right: 35px;
+    height:55px;
+  }
+  .react-autosuggest__container {
+    position: relative;
+  }
+  .loading {
+    margin-top: 25px;
+  }
+  .react-autosuggest__input {
+    width: 100%;
+    margin-top:10px;
+    height: 50px;
+    padding: 10px 20px;
+    font-family: Lekton, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+  }
+
+  .react-autosuggest__input:focus {
+    outline: none;
+  }
+
+  .react-autosuggest__container--open .react-autosuggest__input {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .react-autosuggest__suggestions-container {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    font-family: Lekton, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 2;
+  }
+  .mainSearch {
+    padding-left:0px
+  }
+
+
+  .react-autosuggest__suggestion {
+    cursor: pointer;
+    color:black;
+    padding: 10px 20px;
+  }
+  .react-autosuggest__suggestion span {
+    width:100%;
+    color:red;
+    height:100%;
+  }
+  .react-autosuggest__suggestion--focused {
+    background-color: #ddd;
+  }
+  .mainHeader {
+    transition: 2s linear;
+  }
+  .modalStores {
+    color:$white;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height:40px;
+    line-height:40px;
+  }
+  .modalStores:hover {
+    background-color:white;
+    color:$primary-color;
+    border-top: gray solid 1px;
+    border-bottom: gray solid 1px;
+  }
+  .modalStores p {
+    margin-left:25px;
+    margin-bottom:0px;
+    line-height:40px;
+  }
+  #storesNearYou{
+    font-size: 40px;
+    color: $white;
+  }
+  .size {
+    height:50px;
+  }
+  .priceSubmit {
+    width:40%;
+    height:50px;
+    margin-top: 25px;
+    font-size: 20px;
+  }
+  .chosen {
+    color:$white;
+  }
+  .dollar {
+    display:inline-block;
+    margin-left:30%;
+    font-size: 20px;
+    color:black;
+  }
+  .selectedButton {
+    /* IE10+ */
+background-image: -ms-radial-gradient(center bottom, ellipse farthest-corner, #F6F6F6 40%, #9E9E9E 140%);
+
+/* Mozilla Firefox */
+background-image: -moz-radial-gradient(center bottom, ellipse farthest-corner, #F6F6F6 40%, #9E9E9E 140%);
+
+/* Opera */
+background-image: -o-radial-gradient(center bottom, ellipse farthest-corner, #F6F6F6 40%, #9E9E9E 140%);
+
+/* Webkit (Safari/Chrome 10) */
+background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 359, color-stop(40, #F6F6F6), color-stop(140, #9E9E9E));
+
+/* Webkit (Chrome 11+) */
+background-image: -webkit-radial-gradient(center bottom, ellipse farthest-corner, #F6F6F6 40%, #9E9E9E 140%);
+
+/* W3C Markup */
+background-image: radial-gradient(ellipse farthest-corner at center bottom, #F6F6F6 40%, #9E9E9E 140%);
+color:$black;
+font-weight:bold;
+  }
+  .error {
+    color: red;
+  }
+  .bar {
+    height:40px;
+    margin-left:10%;
+    width:80%;
+    border:5px solid black;
+    background-color:red;
+    border-radius:15px;
+    transition:all ease 1s;
+  }
+  .xp {
+    height:30px;
+    width:50px;
+    background-color:green;
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+    transition:all ease 1s;
+  }
+  .liLinks a:hover {
+    transition: all .5s ease;
+  }
+  .btn-left:focus ,.btn-inner:focus, .btn-right:focus {
+    color:$black
+  }
+  .btn-left {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius:0px;
+  }
+  .btn-inner {
+    border-radius:0px;
+  }
+  .btn-right {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius:0px;
+  }
+  .socialbtn {
+    margin-bottom:5px;
+  }
+  //Login and Sign Up Modal
+.login-btn-header {
+  width:50%;
+  height:100%;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius:0px;
+}
+.sign-up-btn-header:focus,.login-btn-header:focus {
+  color:$black
+}
+.sign-up-btn-header:hover,.login-btn-header:hover {
+  background-color:$primary-color;
+}
+.sign-up-btn-header {
+  width:50%;
+  height:100%;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius:0px;
+}
+
+.modal-header {
+  padding:0;
+  height:50px;
+  border-bottom:none;
+}
+.btn-submit-authenticate {
+  width:200px;
+  margin-right:auto;
+  margin-left:auto;
+  display:block;
+}
+.info {
+  text-align:center !important;
+}
+.emailText {
+  padding-left:5px;
+  border:none;
+  background-color:$black;
+  color:$white;
+  height:220px;
+  width:100%;
+  border-radius:5px;
+}
+.emailName {
+  padding-left:5px;
+  margin-bottom:10px;
+  width:100%;
+  height:40px;
+  border:none;
+  color:$white;
+  background-color:$black;
+  border-radius:5px;
+}
+
+}
